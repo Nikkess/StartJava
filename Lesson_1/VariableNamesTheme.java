@@ -119,8 +119,8 @@ public class VariableNamesTheme {
         System.out.println("\n2. Boolean-переменные\n");
 
         // Сотни равны?
-        boolean hundredsEqual = false;
-        System.out.println("Сотни равны? = " + hundredsEqual);
+        boolean isEqualHundreds = false;
+        System.out.println("Сотни равны? = " + isEqualHundreds);
 
         // Компьютер включен?
         boolean isComputerOn = true;
@@ -147,8 +147,8 @@ public class VariableNamesTheme {
         System.out.println("Новое? = " + isNew);
 
         // Электронная почта действительная?
-        boolean isEmailValid = true;
-        System.out.println("Электронная почта действительная? = " + isEmailValid);
+        boolean isValidEmail = true;
+        System.out.println("Электронная почта действительная? = " + isValidEmail);
 
         // Имеются уникальные строки?
         boolean hasUniqueStrings = false;
@@ -178,8 +178,8 @@ public class VariableNamesTheme {
         System.out.println("Сокращенный uniform resource locator = " + shortUrl);
 
         // Новый идентификатор клиента
-        String newClientId = "CL123456";
-        System.out.println("Новый идентификатор клиента = " + newClientId);
+        String newCid = "CL123456";
+        System.out.println("Новый идентификатор клиента = " + newCid);
 
         // American standard code for information interchange
         int asciiCode = 65;
