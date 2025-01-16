@@ -54,32 +54,36 @@ public class VariablesTheme {
         byte b = Byte.MAX_VALUE;
         
         System.out.println("byte: " + b);
-        System.out.println("byte после инкремента: " + (b++));
-        System.out.println("byte после декремента: " + (b--));
+        System.out.println("byte после инкремента: " + (++b));
+        System.out.println("byte после декремента: " + (--b));
+        System.out.println("");
 
         short s = Short.MAX_VALUE;
         
         System.out.println("short: " + s);
-        System.out.println("short после инкремента: " + (s++));
-        System.out.println("short после декремента: " + (s--));
+        System.out.println("short после инкремента: " + (++s));
+        System.out.println("short после декремента: " + (--s));
+        System.out.println("");
 
         int i = Integer.MAX_VALUE;
         
         System.out.println("int: " + i);
-        System.out.println("int после инкремента: " + (i++));
-        System.out.println("int после декремента: " + (i--));
+        System.out.println("int после инкремента: " + (++i));
+        System.out.println("int после декремента: " + (--i));
+        System.out.println("");
 
         long l = Long.MAX_VALUE;
         
         System.out.println("long: " + l);
-        System.out.println("long после инкремента: " + (l++));
-        System.out.println("long после декремента: " + (l--));
+        System.out.println("long после инкремента: " + (--l));
+        System.out.println("long после декремента: " + (--l));
+        System.out.println("");
 
         char c = Character.MAX_VALUE;
         
         System.out.println("char: " + (int) c);
-        System.out.println("char после инкремента: " + (int) (c++));
-        System.out.println("char после декремента: " + (int) (c--));
+        System.out.println("char после инкремента: " + (int) (++c));
+        System.out.println("char после декремента: " + (int) (--c));
 
         // Задача 5: Перестановка значений переменных
         System.out.println("\n5. Перестановка значений переменных\n");
