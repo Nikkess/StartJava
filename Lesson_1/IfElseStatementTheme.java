@@ -47,11 +47,11 @@ public class IfElseStatementTheme {
         int b = 20;
 
         if (a > b) {
-            System.out.println("Число a больше числа b.");
+            System.out.printf("Число %d больше числа %d%n.", a, b);
         } else if (a < b) {
-            System.out.println("Число a меньше числа b");
+            System.out.printf("Число %d меньше числа %d%n", a, b);
         } else {
-            System.out.println("Число a равно числу b");
+            System.out.printf("Число %d равно числу %d%n", a, b);
         }
 
         // Блок 3: Проверка числа
@@ -124,14 +124,12 @@ public class IfElseStatementTheme {
         System.out.println("\n6. Подсчет начисленных банком %\n");
 
         double deposit = 321123.59;
-        double interestRate;
+        double interestRate = 0.10;
 
         if (deposit < 100000) {
             interestRate = 0.05;
         } else if (deposit <= 300000) {
             interestRate = 0.07;
-        } else {
-            interestRate = 0.10;
         }
 
         double interest = deposit * interestRate;
@@ -145,10 +143,8 @@ public class IfElseStatementTheme {
         System.out.println("\n7. Определение оценки по предметам\n");
 
         int historyPercent = 59;
-        int programmingPercent = 92;
+        int historyGrade = 5;
 
-        int historyGrade;
-        int programmingGrade;
 
         if (historyPercent <= 60) {
             historyGrade = 2;
@@ -156,9 +152,10 @@ public class IfElseStatementTheme {
             historyGrade = 3;
         } else if (historyPercent > 73 && historyPercent <= 91) {
             historyGrade = 4;
-        } else {
-            historyGrade = 5;
         }
+
+        int programmingPercent = 92;
+        int programmingGrade = 5;
 
         if (programmingPercent <= 60) {
             programmingGrade = 2;
@@ -166,8 +163,6 @@ public class IfElseStatementTheme {
             programmingGrade = 3;
         } else if (programmingPercent > 73 && programmingPercent <= 91) {
             programmingGrade = 4;
-        } else {
-            programmingGrade = 5;
         }
 
         System.out.println("История: " + historyGrade);
@@ -203,28 +198,21 @@ public class IfElseStatementTheme {
 
         BigDecimal yearlyProfitBd = 
                 (monthlySalesBd.subtract(monthlyRentBd).subtract(monthlyCostBd))
-                        .multiply(new BigDecimal("12"));
+                        .multiply(BigDecimal.valueOf(12));
 
-        if (yearlyProfitBd.compareTo(BigDecimal.ZERO) > 0) {
             System.out.printf("Прибыль за год: %.2f руб.\n", 
                     yearlyProfitBd.setScale(2, RoundingMode.HALF_UP));
-        } else {
-            System.out.printf("Прибыль за год: %.2f руб.\n", 
-                    yearlyProfitBd.setScale(2, RoundingMode.HALF_UP));
-        }
 
         // Блок 10: Подсчет начисленных банком %
         System.out.println("\n10. Подсчет начисленных банком %\n");
 
         BigDecimal depositBd = new BigDecimal("321123.59");
-        BigDecimal interestRateBd;
+        BigDecimal interestRateBd = new BigDecimal("0.10");
 
-        if (depositBd.compareTo(new BigDecimal("100000")) < 0) {
+        if (depositBd.compareTo(BigDecimal.valueOf(100000)) < 0) {
             interestRateBd = new BigDecimal("0.05");
-        } else if (depositBd.compareTo(new BigDecimal("300000")) <= 0) {
+        } else if (depositBd.compareTo(BigDecimal.valueOf(300000)) <= 0) {
             interestRateBd = new BigDecimal("0.07");
-        } else {
-            interestRateBd = new BigDecimal("0.10");
         }
 
         BigDecimal interestBd = depositBd.multiply(interestRateBd);
