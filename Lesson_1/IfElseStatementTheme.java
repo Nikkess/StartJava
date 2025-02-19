@@ -145,7 +145,6 @@ public class IfElseStatementTheme {
         int historyPercent = 59;
         int historyGrade = 5;
 
-
         if (historyPercent <= 60) {
             historyGrade = 2;
         } else if (historyPercent > 60 && historyPercent <= 73) {
@@ -196,12 +195,12 @@ public class IfElseStatementTheme {
         BigDecimal monthlyRentBd = new BigDecimal("5123.018");
         BigDecimal monthlyCostBd = new BigDecimal("9001.729");
 
-        BigDecimal yearlyProfitBd = 
-                (monthlySalesBd.subtract(monthlyRentBd).subtract(monthlyCostBd))
-                        .multiply(BigDecimal.valueOf(12));
+        BigDecimal yearlyProfitBd = (monthlySalesBd.subtract(monthlyRentBd)
+                .subtract(monthlyCostBd))
+                .multiply(BigDecimal.valueOf(12));
 
-            System.out.printf("Прибыль за год: %.2f руб.\n", 
-                    yearlyProfitBd.setScale(2, RoundingMode.HALF_UP));
+        System.out.printf("Прибыль за год: %.2f руб.\n", 
+                yearlyProfitBd.setScale(2, RoundingMode.HALF_UP));
 
         // Блок 10: Подсчет начисленных банком %
         System.out.println("\n10. Подсчет начисленных банком %\n");
